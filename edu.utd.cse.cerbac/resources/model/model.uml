@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Cerbac="http://www.utd.edu/cse/Cerbac" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.utd.edu/cse/Cerbac /edu.utd.cse.cerbac/resources/profiles/cerbac.profile.uml#_cAxm4BTVEee6jowUEbx-6w">
+  <uml:Model xmi:id="_lIC6MBQhEee6jowUEbx-6w" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="__njpcBQiEee6jowUEbx-6w" name="P1">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Qf_mMxQjEee6jowUEbx-6w" name="nurse" type="_L5i_gBQjEee6jowUEbx-6w" association="_Qf_mMBQjEee6jowUEbx-6w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s7GU4xQjEee6jowUEbx-6w" name="when1" type="_lA6skBQjEee6jowUEbx-6w" association="_s7GU4BQjEee6jowUEbx-6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_L5i_gBQjEee6jowUEbx-6w" name="Nurse"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Qf_mMBQjEee6jowUEbx-6w" name="HowLink1" memberEnd="_Qf_mMxQjEee6jowUEbx-6w _Qf_mNBQjEee6jowUEbx-6w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qf_mMRQjEee6jowUEbx-6w" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qf_mMhQjEee6jowUEbx-6w" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Qf_mNBQjEee6jowUEbx-6w" name="p1" type="__njpcBQiEee6jowUEbx-6w" association="_Qf_mMBQjEee6jowUEbx-6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lA6skBQjEee6jowUEbx-6w" name="When1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_s7GU4BQjEee6jowUEbx-6w" name="WhenLink1" memberEnd="_s7GU4xQjEee6jowUEbx-6w _s7GU5BQjEee6jowUEbx-6w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s7GU4RQjEee6jowUEbx-6w" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s7GU4hQjEee6jowUEbx-6w" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_s7GU5BQjEee6jowUEbx-6w" name="p1" type="__njpcBQiEee6jowUEbx-6w" association="_s7GU4BQjEee6jowUEbx-6w"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lI510BQhEee6jowUEbx-6w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_imQuMBZ3EeelXajHeFP_UQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_imQuMRZ3EeelXajHeFP_UQ" key="Version" value="0.0.12"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_imQuMhZ3EeelXajHeFP_UQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_imQuMxZ3EeelXajHeFP_UQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_imQuNBZ3EeelXajHeFP_UQ" key="Date" value="2017-03-29"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_imQuNRZ3EeelXajHeFP_UQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lI6c4BQhEee6jowUEbx-6w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/edu.utd.cse.cerbac/resources/profiles/cerbac.profile.uml#_cAxm4BTVEee6jowUEbx-6w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/edu.utd.cse.cerbac/resources/profiles/cerbac.profile.uml#_mEFgcA3mEeen2NFyc6Aifw"/>
+    </profileApplication>
+  </uml:Model>
+  <Cerbac:PositiveAuthorization xmi:id="__ojH8BQiEee6jowUEbx-6w" base_Class="__njpcBQiEee6jowUEbx-6w"/>
+  <Cerbac:Who xmi:id="_L5ulsBQjEee6jowUEbx-6w" base_Class="_L5i_gBQjEee6jowUEbx-6w"/>
+  <Cerbac:HowLink xmi:id="_QgrisBQjEee6jowUEbx-6w" base_Association="_Qf_mMBQjEee6jowUEbx-6w"/>
+  <Cerbac:When xmi:id="_lBJ9IBQjEee6jowUEbx-6w" base_Class="_lA6skBQjEee6jowUEbx-6w"/>
+  <Cerbac:WhenLink xmi:id="_s7kO8BQjEee6jowUEbx-6w" base_Association="_s7GU4BQjEee6jowUEbx-6w"/>
+</xmi:XMI>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration:PapyrusConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://www.eclipse.org/papyrus/infra/viewpoints/configuration" xmi:id="_7jCHgAw0EeeCgcA165wnlg">
+  <viewpoints xsi:type="configuration:PapyrusViewpoint" xmi:id="_R2fGAAw2EeeCgcA165wnlg" name="Default Papyrus Viewpoint">
+    <modelKinds xsi:type="configuration:PapyrusDiagram" xmi:id="_Cg6NsAw3EeeCgcA165wnlg" name="Cerbac Diagram" icon="platform:/plugin/edu.utd.cse.cerbac/resources/icons/obj16/cerbac_icon.png" implementationID="PapyrusUMLClassDiagram" categories="_4DzMcHKlEeaVyqhV8kmQOABBB" customPalette="platform:/plugin/edu.utd.cse.cerbac/resources/palettes/cerbac.paletteconfiguration" customStyle="platform:/plugin/edu.utd.cse.cerbac/resources/theme/theme_cerbac.css">
+      <modelRules xmi:id="_BazloAxVEeeCgcA165wnlg">
+        <element href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+      </modelRules>
+      <owningRules xmi:id="_IV_2IAxVEeeCgcA165wnlg">
+        <element href="http://www.eclipse.org/uml2/5.0.0/UML#//Package"/>
+      </owningRules>
+      <childRules xmi:id="_NrUk8AxpEeeWApUI22xu-A"/>
+      <paletteRules xmi:id="_5TF3VMIIEeaukO1aMjwmNA" permit="false" element="clazz.group.*"/>
+    </modelKinds>
+  </viewpoints>
+  <defaultStakeholder href="platform:/plugin/org.eclipse.papyrus.infra.viewpoints.policy/builtin/default.configuration#_7wLmkdxhEeOqHvRyiN87hA"/>
+  <metamodel href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
+  <categories xmi:id="_4DzMcHKlEeaVyqhV8kmQOABBB" name="Cerbac"/>
+</configuration:PapyrusConfiguration>

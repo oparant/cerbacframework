@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+<extension name="dsml.validation.generated.cerbac" point="org.eclipse.emf.validation.constraintProviders">
+      <category id="edu.utd.cse.cerbac.validation.cerbac" mandatory="false" name="edu.utd.cse.cerbac.validation.cerbac"/>
+      <constraintProvider cache="false" mode="Batch">
+         <package namespaceUri="http://www.utd.edu/cse/Cerbac"/>
+         <constraints categories="edu.utd.cse.cerbac.validation.cerbac">
+         
+           <constraint id="constraint.cerbac.rules"  isEnabledByDefault="true" lang="Java" mode="Batch" severity="ERROR" statusCode="3" name="cerbac.rules"   class="edu.utd.cse.cerbac.validation.CerbacRulesConstraint">
+          	   <message>The Policy {0} has policy errors</message>
+            </constraint>  
+               
+         </constraints>
+      </constraintProvider>
+   </extension>
+   <extension name="dsml.validation.generated.cerbac" point="org.eclipse.emf.validation.constraintBindings">
+   	 <clientContext id="PositiveAuthPolicyContext">
+         <selector class="edu.utd.cse.cerbac.validation.selectors.PolicyGroupClientSelector"/>
+      </clientContext>
+      <binding context="PositiveAuthPolicyContext">
+         <constraint ref="edu.utd.cse.cerbac.validation.constraint.cerbac.rules"/>
+      </binding>
+     
+   </extension>
+</plugin>

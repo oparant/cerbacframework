@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="C:\Users\tonero\cerbac_images\NegativeObligation.png"
+   inkscape:export-xdpi="5.7191482"
+   inkscape:export-ydpi="5.7191482"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="PositiveObligation.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4513"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#d0271a;stop-opacity:1;"
+         offset="0"
+         id="stop4509" />
+      <stop
+         style="stop-color:#d0271a;stop-opacity:0;"
+         offset="1"
+         id="stop4511" />
+    </linearGradient>
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient5955"
+       gradientUnits="userSpaceOnUse"
+       x="77.613463"
+       y="85.912377">
+      <meshrow
+         id="meshrow5957">
+        <meshpatch
+           id="meshpatch5959">
+          <stop
+             path="c 15.7942,-13.8752  41.4015,-13.8752  57.1957,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop5961" />
+          <stop
+             path="c 15.7942,13.8752  15.7942,36.3714  0,50.2467"
+             style="stop-color:#800080;stop-opacity:1"
+             id="stop5963" />
+          <stop
+             path="c -15.7942,13.8752  -41.4015,13.8752  -57.1957,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop5965" />
+          <stop
+             path="c -15.7942,-13.8752  -15.7942,-36.3714  -1.42109e-014,-50.2467"
+             style="stop-color:#800080;stop-opacity:1"
+             id="stop5967" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-300"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="5120"
+     inkscape:window-height="2479"
+     inkscape:window-x="-13"
+     inkscape:window-y="-13"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       id="path3680"
+       cx="106.2113"
+       cy="111.03571"
+       rx="40.443455"
+       ry="35.529762"
+       style="stroke-width:0.26458332;fill:url(#meshgradient5955);fill-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:55.55863953px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.57873577"
+       x="88.617722"
+       y="112.36482"
+       id="text4489"
+       transform="scale(0.84124651,1.1887122)"><tspan
+         sodipodi:role="line"
+         id="tspan4487"
+         x="88.617722"
+         y="112.36482"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:55.55863953px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic Bold';stroke-width:0.57873577">O+</tspan></text>
+  </g>
+</svg>

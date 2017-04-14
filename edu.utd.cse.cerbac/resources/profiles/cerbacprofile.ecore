@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cerbacprofile" nsURI="http://www.utd.edu/cse/Cerbac" nsPrefix="CerbacProfile">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="Cerbac"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudSecurityAndPrivacyPolicy" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CerbacPolicy" abstract="true" eSuperTypes="#//CloudSecurityAndPrivacyPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="who" ordered="false" lowerBound="1"
+        eType="#//Who"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="where" ordered="false"
+        eType="#//Where"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="why" ordered="false" eType="#//Why"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="how" ordered="false" eType="#//How"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="when" ordered="false" eType="#//When"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="what" ordered="false" lowerBound="1"
+        eType="#//What"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Who" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyAttributes" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Where" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Why" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="How" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="When" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="What" eSuperTypes="#//PolicyAttributes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthorizationPolicy" abstract="true"
+      eSuperTypes="#//CerbacPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ObligationPolicy" abstract="true" eSuperTypes="#//CerbacPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveAuthorization" eSuperTypes="#//AuthorizationPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeAuthorization" eSuperTypes="#//AuthorizationPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveObligation" eSuperTypes="#//ObligationPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativeObligation" eSuperTypes="#//ObligationPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyPackage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudResource" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudService" abstract="true" eSuperTypes="#//CloudResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hardware" eSuperTypes="#//CloudResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//CloudResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputeService" eSuperTypes="#//CloudService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkingService" eSuperTypes="#//CloudService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageService" eSuperTypes="#//CloudService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Storage" eSuperTypes="#//CloudResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HowLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhatLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhereLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhoLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhenLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhyLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyAttributeExtend">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Extension" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Extension"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Generalization" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyAttributeLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cerbacpolicy" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//CerbacPolicy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PolicyGroupLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  </eClassifiers>
+</ecore:EPackage>

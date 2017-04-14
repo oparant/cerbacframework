@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<paletteconfiguration:PaletteConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:paletteconfiguration="http://www.eclipse.org/papyrus/diagram/paletteconfiguration/0.7" id="cerbacpalettemodel" label="Cerbac">
+
+	
+	<drawerConfigurations id="edu.utd.cse.cerbac.node.CerbacPolicyTypes" label="Cerbac Policy Types" description="Cerbac Policy Types">	
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.node.cerbac.positiveauthorization" label="PositiveAuthorization" description="Create a Positive Authorization">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/PositiveAuthorization.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.PositiveAuthorization_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.negativeauthorization" label="NegativeAuthorization" description="Create a Negative Authorization">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/NegativeAuthorization.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.NegativeAuthorization_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.positiveobligation" label="PositiveObligation" description="Create a Positive Obligation">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/PositiveObligation.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.PositiveObligation_Shape"/>
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.negativeobligation" label="NegativeObligation" description="Create a Negative Obligation">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/NegativeObligation.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.NegativeObligation_Shape"/>
+		</ownedConfigurations>
+	</drawerConfigurations>	
+	
+	<drawerConfigurations id="edu.utd.cse.cerbac.node.CerbacPolicyAttributes" label="Cerbac Policy Attributes" description="Cerbac Policy Types">		
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.action" label="Action" description="Create a Policy Action">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/Action.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.Action_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.who" label="Who" description="Create a Policy Subject">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/Who.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.Who_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.what" label="What" description="Create a Policy Target">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/What.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.What_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.where" label="Where" description="Create a 'Where' Policy Attribute">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/Where.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.Where_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.when" label="When" description="Create a 'When' Policy Attribute">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/When.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.When_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.why" label="Why" description="Create a 'Why' Policy Attribute">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/Why.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.Why_Shape"/>
+		</ownedConfigurations>
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.how" label="How" description="Create a 'How' Policy Attribute">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/How.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.How_Shape"/>
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.policygroup" label="Policy Group" description="Create a Policy Group">
+			<icon pluginID="org.eclipse.uml2.uml.edit" iconPath="icons/full/obj16/Package.gif"/>
+			
+			<elementDescriptors elementTypeId="edu.utd.cse.profile.PolicyGroup_Package_Shape"/>
+		</ownedConfigurations>
+	
+	</drawerConfigurations>
+	
+	
+	<drawerConfigurations id="edu.utd.cse.cerbac.node.CerbacEdges" label="Cerbac Edges" description="Cerbac Edges">
+	
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.actionassociation" label="ActionLink" description="Create a Action Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.ActionLink_Association_Edge"/>	
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.whoassociation" 	label="WhoLink" description="Create a Who Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.WhoAssociation_Edge"/>			
+		</ownedConfigurations>
+	
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.whatassociation" 	label="WhatLink" description="Create a What Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.WhatAssociation_Edge"/>		
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.whereassociation" label="WhereLink" description="Create a Where Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>	
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.WhereAssociation_Edge"/>		
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.howassociation" 	label="HowLink" description="Create a How Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.HowAssociation_Edge"/>		
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.whyassociation" 	label="WhyLink" description="Create a Why Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.WhyAssociation_Edge"/>			
+		</ownedConfigurations>
+		
+		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.whenassociation" 	label="WhenLink" description="Create a When Link" kind="ConnectionTool">
+			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
+			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.WhenAssociation_Edge"/>			
+		</ownedConfigurations>
+		
+	</drawerConfigurations>
+
+	
+	<requiredProfiles>cerbac</requiredProfiles>
+</paletteconfiguration:PaletteConfiguration>

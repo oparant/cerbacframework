@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+ 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cerbac.profile -->
+      <package
+            uri="http://www.utd.edu/cse/Cerbac"
+            class="edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage"
+            genModel="resources/profiles/cerbac.profile.genmodel"/>
+   </extension>
+   
+  <extension
+    point="org.eclipse.emf.ecore.uri_mapping">
+    <mapping
+       source="pathmap://CERBAC_PROFILES/"
+       target="platform:/plugin/edu.utd.cse.cerbac/resources/profiles/">
+    </mapping>
+     <mapping
+       source="pathmap://CERBAC_LIBRARY/"
+       target="platform:/plugin/edu.utd.cse.cerbac/resources/profiles/">
+    </mapping>
+ </extension>  
+   
+  
+   <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="pathmap://CERBAC_PROFILES/cerbac.profile.uml#_mEFgcA3mEeen2NFyc6Aifw"
+            uri="http://www.utd.edu/cse/Cerbac">
+      </profile>
+   </extension>
+
+
+
+ <!-- register the profile so it can be found by the Papyrus Apply profil property view -->
+ <extension
+    point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+    <profile
+        description="Cerbac Profile for Cloud Computing Security and Privacy Policies"
+        iconpath="resources/icons/obj32/cerbac_icon.png"
+        name="Cerbac"
+        path="pathmap://CERBAC_PROFILES/cerbac.profile.uml"
+        >
+    </profile>
+ </extension>
+ 
+  <!-- register the profile so it can be found by the Papyrus Import Library menu in the model explorer -->   
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+      <library
+            description="Library for Cerbac"
+            iconpath="resources/icons/obj32/cerbac_icon.png"
+            name="Cerbac"
+            path="pathmap://CERBAC_LIBRARY/cerbac.profile.uml"
+            >
+      </library>
+   </extension>
+ 
+ 
+   <extension point="org.eclipse.papyrus.infra.ui.papyrusDiagram">
+	     <diagramCategory
+	            class="edu.utd.cse.cerbac.CreateCerbacModelCommand"
+	            description="Diagram for Cerbac Framework"
+	            icon="/resources/icons/obj32/cerbac_icon.png"
+	            id="Cerbac"
+	            label="Cerbac">
+	     </diagramCategory>
+	 
+    </extension>
+    
+ 
+    <extension
+         point="org.eclipse.papyrus.infra.viewpoints.policy.custom">
+         
+      <contribution
+            file="resources/configurations/cerbac.configuration"
+            original="platform:/plugin/org.eclipse.papyrus.infra.viewpoints.policy/builtin/default.configuration">
+      </contribution>
+
+   </extension>
+
+
+	 <extension
+	       point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+	    <elementTypeSet
+	          clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+	          path="resources/types/cerbacdi.elementtypesconfigurations">
+	    </elementTypeSet>
+	</extension> 
+ 
+     
+   <extension
+       point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+    <elementTypeSet
+          clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+          path="resources/types/cerbac.elementtypesconfigurations">
+    </elementTypeSet>
+ </extension>
+ 
+ 
+ 
+ <extension
+       point="org.eclipse.papyrus.infra.newchild">
+    <menuCreationModel
+          model="resources/newChild/cerbac.creationmenumodel">
+    </menuCreationModel>
+ </extension>
+ 
+ 
+ 
+
+<!--New Wizard for Cerbac-->
+ <extension
+         id="Cerbac::Wizard"
+         name="Cerbac Framework"
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            canFinishEarly="true"
+            category="edu.utd.cse.cerbac.wizard"
+            class="edu.utd.cse.cerbac.wizard.NewCerbacModelWizard"
+            finalPerspective="org.eclipse.papyrus.infra.core.perspective"
+            hasPages="true"
+            icon="platform:/plugin/edu.utd.cse.cerbac/resources/icons/obj32/cerbac_icon.png"
+            id="org.eclipse.papyrus.wizards.createcerbacmodel"
+            name="Cerbac Model"
+            project="false">
+         <selection
+               class="org.eclipse.core.resources.IResource">
+         </selection>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="edu.utd.cse.cerbac.wizard"
+            class="edu.utd.cse.cerbac.wizard.NewCerbacProjectWizard"
+            finalPerspective="org.eclipse.papyrus.infra.core.perspective"
+            hasPages="false"
+            icon="platform:/plugin/edu.utd.cse.cerbac/resources/icons/obj32/cerbac_icon.png"
+            id="org.eclipse.papyrus.wizards.createcerbacwizard"
+            name="Cerbac Project"
+            project="true">
+         <description>
+            Create a Cerbac Framework Project
+         </description>
+      </wizard>
+      <category
+            id="edu.utd.cse.cerbac.wizard"
+            name="Cerbac Framework">
+      </category>
+   </extension>
+
+
+  <extension
+         point="org.eclipse.papyrus.infra.gmfdiag.css.theme">
+      <themeDefinition
+            icon="resources/icons/obj32/cerbac_icon.png"
+            id="edu.utd.cse.cerbac"
+            label="Cerbac Library Theme">
+      </themeDefinition>
+      <themeContribution
+            id="edu.utd.cse.cerbac">
+         <stylesheet stylesheetPath="resources/theme/theme_cerbac.css">
+         </stylesheet>
+      </themeContribution>
+   </extension>
+
+
+  
+
+
+</plugin>

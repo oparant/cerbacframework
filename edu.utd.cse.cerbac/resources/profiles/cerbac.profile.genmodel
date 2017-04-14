@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/edu.utd.cse.cerbac/src-gen" editDirectory="/edu.utd.cse.cerbac.edit/src-gen"
+    modelPluginID="edu.utd.cse.cerbac" modelName="Cerbac" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/edu.utd.cse.cerbac.tests/src-gen" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="7.0" copyrightFields="false" binaryCompatibleReflectiveMethods="true"
+    usedGenPackages="../../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>cerbac.profile.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="CerbacProfile" basePackage="edu.utd.cse.cerbac.profile"
+      disposableProviderFactory="true" ecorePackage="cerbacprofile.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudSecurityAndPrivacyPolicy">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CloudSecurityAndPrivacyPolicy/base_Class"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CerbacPolicy">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/action"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/who"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/where"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/why"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/how"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/when"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CerbacPolicy/what"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Action">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//Action/base_Class"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Who"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//PolicyAttributes">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyAttributes/base_Class"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Where"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Why"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//How"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//When"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//What"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//AuthorizationPolicy"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//ObligationPolicy"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PositiveAuthorization"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//NegativeAuthorization"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PositiveObligation"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//NegativeObligation"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PolicyPackage">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyPackage/base_Class"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyPackage/base_Package"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudResource">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CloudResource/base_Class"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudService"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Hardware"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Data"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//ComputeService"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//NetworkingService"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//StorageService"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Storage"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//ActionLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//ActionLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//HowLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//HowLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//WhatLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//WhatLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//WhereLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//WhereLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//WhoLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//WhoLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//WhenLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//WhenLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//WhyLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//WhyLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PolicyAttributeExtend">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyAttributeExtend/base_Extension"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyAttributeExtend/base_Generalization"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PolicyAttributeLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyAttributeLink/base_Association"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PolicyGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyGroup/base_Class"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyGroup/cerbacpolicy"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//PolicyGroupLink">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyGroupLink/base_Association"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

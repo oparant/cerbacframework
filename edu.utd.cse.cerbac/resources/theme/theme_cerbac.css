@@ -1,0 +1,223 @@
+* {
+	svgCssFile: 'platform:/plugin/edu.utd.cse.cerbac/theme/theme_svg.css'; /* The stylesheet to apply to all SVG Images */
+}
+
+
+[appliedStereotypes~=PolicyGroup] {
+	radiusWidth:150;
+	radiusHeight:50;
+	borderStyle:dash;
+	fillColor:#F3F76D;
+}
+
+[appliedStereotypes~=Who],
+[appliedStereotypes~=What],
+[appliedStereotypes~=Where],
+[appliedStereotypes~=When],
+[appliedStereotypes~=How],
+[appliedStereotypes~=Why],
+[appliedStereotypes~=Action] {
+	radiusWidth:150;
+	radiusHeight:50;
+	borderStyle:dash;
+}
+
+[appliedStereotypes~=PositiveAuthorization],
+[appliedStereotypes~=PositiveObligation],
+[appliedStereotypes~=NegativeAuthorization],
+[appliedStereotypes~=NegativeObligation],
+[appliedStereotypes~=Who],
+[appliedStereotypes~=What],
+[appliedStereotypes~=Where],
+[appliedStereotypes~=When],
+[appliedStereotypes~=How],
+[appliedStereotypes~=Why],
+[appliedStereotypes~=Action],
+[appliedStereotypes~=PolicyGroup]
+ { 
+	displayName:true;
+	displayIcon:true;
+	elementIcon:false;
+	isNameWrap: true;
+	bold:true;
+}
+
+/* Make rounded corners for all connectors.
+[appliedStereotypes~=Association],
+[appliedStereotypes~=ActionLink],
+[appliedStereotypes~=WhoLink],
+[appliedStereotypes~=WhatLink],
+[appliedStereotypes~=WhereLink],
+[appliedStereotypes~=HowLink],
+[appliedStereotypes~=WhyLink],
+[appliedStereotypes~=WhenLink]
+ {
+	routing:Rectilinear;
+	roundedBendpointsRadius:10;
+	
+}
+ */
+
+
+
+/* Hide compartment for all elements - just show the name and related icon. */
+Compartment {
+    visible:false;
+    showTitle: false;
+}
+
+/* Show symbol compartment so that text is "pushed" to upper boundary of element. */
+Compartment[kind="symbol"]  {
+    visible:true;
+}
+
+Compartment[kind="internalstructure"]{
+    collapsed:true;
+}
+
+/* Apply background color for policy type elements. */
+[appliedStereotypes~=PositiveAuthorization],
+[appliedStereotypes~=PositiveObligation],
+[appliedStereotypes~=NegativeObligation],
+[appliedStereotypes~=NegativeAuthorization] {
+	fillColor:#C390D4;
+}
+
+/* Apply background color for policy attributes elements. */
+[appliedStereotypes~=Who],
+[appliedStereotypes~=What],
+[appliedStereotypes~=Where],
+[appliedStereotypes~=When],
+[appliedStereotypes~=Where],
+[appliedStereotypes~=How],
+[appliedStereotypes~=Why] {
+	fillColor:#FCA7AD;
+}
+
+/* Default settings for "Symbol" shapes. */
+*.Symbol {
+	transparency:100;
+	followSVGSymbol:true;
+	displayIcon:false;
+}
+
+
+/* Turn on "floating label" for "Symbol" shapes. */
+*.Symbol > Label {
+	visible:true;
+}
+
+/* Turn off "stereotype label" for "Symbol" shapes. */
+*.Symbol > Label[type=StereotypeLabel] {
+	visible:false;
+}
+
+[appliedStereotypes~=Who]> Compartment[kind=constraints],
+[appliedStereotypes~=Who]> Compartment[kind=operations],
+[appliedStereotypes~=Who]> Compartment[kind=attributes],
+[appliedStereotypes~=Who]> Compartment[kind=symbol],
+
+[appliedStereotypes~=What]> Compartment[kind=constraints],
+[appliedStereotypes~=What]> Compartment[kind=operations],
+[appliedStereotypes~=What]> Compartment[kind=attributes],
+[appliedStereotypes~=What]> Compartment[kind=symbol],
+
+[appliedStereotypes~=Where]> Compartment[kind=constraints],
+[appliedStereotypes~=Where]> Compartment[kind=operations],
+[appliedStereotypes~=Where]> Compartment[kind=attributes],
+[appliedStereotypes~=Where]> Compartment[kind=symbol],
+
+[appliedStereotypes~=Why]> Compartment[kind=constraints],
+[appliedStereotypes~=Why]> Compartment[kind=operations],
+[appliedStereotypes~=Why]> Compartment[kind=attributes],
+[appliedStereotypes~=Why]> Compartment[kind=symbol],
+
+[appliedStereotypes~=When]> Compartment[kind=constraints],
+[appliedStereotypes~=When]> Compartment[kind=operations],
+[appliedStereotypes~=When]> Compartment[kind=attributes],
+[appliedStereotypes~=When]> Compartment[kind=symbol],
+
+[appliedStereotypes~=How]> Compartment[kind=constraints],
+[appliedStereotypes~=How]> Compartment[kind=operations],
+[appliedStereotypes~=How]> Compartment[kind=attributes],
+[appliedStereotypes~=How]> Compartment[kind=symbol],
+
+[appliedStereotypes~=Action]> Compartment[kind=constraints],
+[appliedStereotypes~=Action]> Compartment[kind=operations],
+[appliedStereotypes~=Action]> Compartment[kind=attributes],
+[appliedStereotypes~=Action]> Compartment[kind=symbol],
+
+[appliedStereotypes~=NegativeAuthorization]> Compartment[kind=attributes],
+[appliedStereotypes~=NegativeAuthorization]> Compartment[kind=symbol],
+[appliedStereotypes~=NegativeAuthorization]> Compartment[kind=operations],
+
+[appliedStereotypes~=NegativeObligation]> Compartment[kind=attributes],
+[appliedStereotypes~=NegativeObligation]> Compartment[kind=symbol],
+[appliedStereotypes~=NegativeObligation]> Compartment[kind=operations],
+
+[appliedStereotypes~=PositiveObligation]> Compartment[kind=attributes],
+[appliedStereotypes~=PositiveObligation]> Compartment[kind=symbol],
+[appliedStereotypes~=PositiveObligation]> Compartment[kind=operations],
+
+[appliedStereotypes~=PolicyGroup]> Compartment[kind=constraints],
+[appliedStereotypes~=PolicyGroup]> Compartment[kind=operations],
+[appliedStereotypes~=PolicyGroup]> Compartment[kind=attributes],
+[appliedStereotypes~=PolicyGroup]> Compartment[kind=symbol],
+
+[appliedStereotypes~=PositiveAuthorization]> Compartment[kind=attributes],
+[appliedStereotypes~=PositiveAuthorization]> Compartment[kind=symbol],
+[appliedStereotypes~=PositiveAuthorization]> Compartment[kind=operations] {
+	visible:false;
+}
+
+[appliedStereotypes~=Who].Symbol {
+	svgFile: 'platform:/plugin/edu.utd.cse.cerbac/resources/icons/obj16/Who.png';
+	floatingLabelOffsetWidth:10;
+    floatingLabelOffsetHeight:55;
+	displayName:false;
+	
+}
+
+[appliedStereotypes~=Where].Symbol {
+	svgFile: 'platform:/plugin/edu.utd.cse.cerbac/resources/icons/obj16/Where.png';
+	floatingLabelOffsetWidth:10;
+    floatingLabelOffsetHeight:55;
+	displayName:false;
+	
+}
+
+Package.showSymbol > Compartment[kind=symbol]{
+	visible: false;
+}
+
+Package.showSymbol {
+	displayBorder:true;
+	transparency: 0;
+	lineWidth:2;
+}
+
+
+Association > Label:sourceRole {
+	visible:false;
+}
+
+Association > Label:targetRole {
+	visible:false;
+}
+
+
+Association > Label:sourceMultiplicity {
+	visible:false;
+}
+
+Association > Label:targetMultiplicity {
+	visible:false;
+}
+
+Association > Label:name {
+	visible:false;
+}
+
+Association > Label:stereotype {
+	visible:false;
+}
