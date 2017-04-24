@@ -7,17 +7,17 @@
          <constraints categories="edu.utd.cse.cerbac.validation.cerbac">
          
            <constraint id="constraint.cerbac.rules"  isEnabledByDefault="true" lang="Java" mode="Batch" severity="ERROR" statusCode="3" name="cerbac.rules"   class="edu.utd.cse.cerbac.validation.CerbacRulesConstraint">
-          	   <message>The Policy {0} has policy errors</message>
+          	   <message>Policy Error(s): {0} </message>
             </constraint>  
                
          </constraints>
       </constraintProvider>
    </extension>
    <extension name="dsml.validation.generated.cerbac" point="org.eclipse.emf.validation.constraintBindings">
-   	 <clientContext id="PositiveAuthPolicyContext">
+   	 <clientContext id="PolicyGroupPolicyContext">
          <selector class="edu.utd.cse.cerbac.validation.selectors.PolicyGroupClientSelector"/>
       </clientContext>
-      <binding context="PositiveAuthPolicyContext">
+      <binding context="PolicyGroupPolicyContext">
          <constraint ref="edu.utd.cse.cerbac.validation.constraint.cerbac.rules"/>
       </binding>
      

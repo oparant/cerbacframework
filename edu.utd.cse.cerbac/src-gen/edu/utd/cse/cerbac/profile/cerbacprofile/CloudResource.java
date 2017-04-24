@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getBase_Class <em>Base Class</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId <em>Resource Id</em>}</li>
  * </ul>
  *
  * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getCloudResource()
@@ -46,5 +47,31 @@ public interface CloudResource extends EObject {
 	 * @generated
 	 */
 	void setBase_Class(org.eclipse.uml2.uml.Class value);
+
+	/**
+	 * Returns the value of the '<em><b>Resource Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resource Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resource Id</em>' attribute.
+	 * @see #setResourceId(String)
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getCloudResource_ResourceId()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getResourceId();
+
+	/**
+	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId <em>Resource Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Resource Id</em>' attribute.
+	 * @see #getResourceId()
+	 * @generated
+	 */
+	void setResourceId(String value);
 
 } // CloudResource

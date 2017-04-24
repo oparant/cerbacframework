@@ -2,7 +2,6 @@
  */
 package edu.utd.cse.cerbac.profile.cerbacprofile.impl;
 
-import edu.utd.cse.cerbac.profile.cerbacprofile.Action;
 import edu.utd.cse.cerbac.profile.cerbacprofile.ActionLink;
 import edu.utd.cse.cerbac.profile.cerbacprofile.AuthorizationPolicy;
 import edu.utd.cse.cerbac.profile.cerbacprofile.CerbacPolicy;
@@ -41,11 +40,14 @@ import edu.utd.cse.cerbac.profile.cerbacprofile.WhoLink;
 import edu.utd.cse.cerbac.profile.cerbacprofile.Why;
 import edu.utd.cse.cerbac.profile.cerbacprofile.WhyLink;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.uml2.types.TypesPackage;
 
 import org.eclipse.uml2.uml.UMLPackage;
 
@@ -69,13 +71,6 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * @generated
 	 */
 	private EClass cerbacPolicyEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass actionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +126,13 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass cloudResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass authorizationPolicyEClass = null;
 
 	/**
@@ -174,13 +176,6 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * @generated
 	 */
 	private EClass policyPackageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass cloudResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -404,7 +399,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_Action() {
+	public EReference getCerbacPolicy_Who() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -413,7 +408,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_Who() {
+	public EReference getCerbacPolicy_Where() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -422,7 +417,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_Where() {
+	public EReference getCerbacPolicy_Why() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -431,7 +426,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_Why() {
+	public EReference getCerbacPolicy_How() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -440,7 +435,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_How() {
+	public EReference getCerbacPolicy_When() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -449,7 +444,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_When() {
+	public EReference getCerbacPolicy_What() {
 		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -458,8 +453,8 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCerbacPolicy_What() {
-		return (EReference)cerbacPolicyEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCerbacPolicy_Id() {
+		return (EAttribute)cerbacPolicyEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -467,17 +462,8 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAction() {
-		return actionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAction_Base_Class() {
-		return (EReference)actionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCerbacPolicy_Action() {
+		return (EAttribute)cerbacPolicyEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -487,6 +473,15 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 */
 	public EClass getWho() {
 		return whoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWho_Principal() {
+		return (EAttribute)whoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -521,8 +516,26 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getWhere_AccessPoint() {
+		return (EAttribute)whereEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWhy() {
 		return whyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWhy_Purpose() {
+		return (EAttribute)whyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -539,6 +552,15 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHow_Device() {
+		return (EAttribute)howEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWhen() {
 		return whenEClass;
 	}
@@ -548,8 +570,62 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getWhen_Time() {
+		return (EAttribute)whenEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWhat() {
 		return whatEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhat_Resource() {
+		return (EReference)whatEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWhat_ResourceDescription() {
+		return (EAttribute)whatEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCloudResource() {
+		return cloudResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCloudResource_Base_Class() {
+		return (EReference)cloudResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCloudResource_ResourceId() {
+		return (EAttribute)cloudResourceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -631,24 +707,6 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 	 */
 	public EReference getPolicyPackage_Base_Package() {
 		return (EReference)policyPackageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCloudResource() {
-		return cloudResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCloudResource_Base_Class() {
-		return (EReference)cloudResourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -962,31 +1020,40 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 		createEReference(cloudSecurityAndPrivacyPolicyEClass, CLOUD_SECURITY_AND_PRIVACY_POLICY__BASE_CLASS);
 
 		cerbacPolicyEClass = createEClass(CERBAC_POLICY);
-		createEReference(cerbacPolicyEClass, CERBAC_POLICY__ACTION);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__WHO);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__WHERE);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__WHY);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__HOW);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__WHEN);
 		createEReference(cerbacPolicyEClass, CERBAC_POLICY__WHAT);
-
-		actionEClass = createEClass(ACTION);
-		createEReference(actionEClass, ACTION__BASE_CLASS);
+		createEAttribute(cerbacPolicyEClass, CERBAC_POLICY__ID);
+		createEAttribute(cerbacPolicyEClass, CERBAC_POLICY__ACTION);
 
 		whoEClass = createEClass(WHO);
+		createEAttribute(whoEClass, WHO__PRINCIPAL);
 
 		policyAttributesEClass = createEClass(POLICY_ATTRIBUTES);
 		createEReference(policyAttributesEClass, POLICY_ATTRIBUTES__BASE_CLASS);
 
 		whereEClass = createEClass(WHERE);
+		createEAttribute(whereEClass, WHERE__ACCESS_POINT);
 
 		whyEClass = createEClass(WHY);
+		createEAttribute(whyEClass, WHY__PURPOSE);
 
 		howEClass = createEClass(HOW);
+		createEAttribute(howEClass, HOW__DEVICE);
 
 		whenEClass = createEClass(WHEN);
+		createEAttribute(whenEClass, WHEN__TIME);
 
 		whatEClass = createEClass(WHAT);
+		createEReference(whatEClass, WHAT__RESOURCE);
+		createEAttribute(whatEClass, WHAT__RESOURCE_DESCRIPTION);
+
+		cloudResourceEClass = createEClass(CLOUD_RESOURCE);
+		createEReference(cloudResourceEClass, CLOUD_RESOURCE__BASE_CLASS);
+		createEAttribute(cloudResourceEClass, CLOUD_RESOURCE__RESOURCE_ID);
 
 		authorizationPolicyEClass = createEClass(AUTHORIZATION_POLICY);
 
@@ -1003,9 +1070,6 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 		policyPackageEClass = createEClass(POLICY_PACKAGE);
 		createEReference(policyPackageEClass, POLICY_PACKAGE__BASE_CLASS);
 		createEReference(policyPackageEClass, POLICY_PACKAGE__BASE_PACKAGE);
-
-		cloudResourceEClass = createEClass(CLOUD_RESOURCE);
-		createEReference(cloudResourceEClass, CLOUD_RESOURCE__BASE_CLASS);
 
 		cloudServiceEClass = createEClass(CLOUD_SERVICE);
 
@@ -1082,6 +1146,7 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 
 		// Obtain other dependent packages
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1114,31 +1179,40 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 		initEReference(getCloudSecurityAndPrivacyPolicy_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, CloudSecurityAndPrivacyPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cerbacPolicyEClass, CerbacPolicy.class, "CerbacPolicy", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCerbacPolicy_Action(), this.getAction(), null, "action", null, 1, -1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_Who(), this.getWho(), null, "who", null, 1, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_Where(), this.getWhere(), null, "where", null, 0, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_Why(), this.getWhy(), null, "why", null, 0, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_How(), this.getHow(), null, "how", null, 0, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_When(), this.getWhen(), null, "when", null, 0, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCerbacPolicy_What(), this.getWhat(), null, "what", null, 1, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAction_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCerbacPolicy_Id(), theTypesPackage.getString(), "id", null, 1, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCerbacPolicy_Action(), theTypesPackage.getString(), "action", null, 1, 1, CerbacPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(whoEClass, Who.class, "Who", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWho_Principal(), theTypesPackage.getString(), "principal", null, 1, 1, Who.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(policyAttributesEClass, PolicyAttributes.class, "PolicyAttributes", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPolicyAttributes_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, PolicyAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(whereEClass, Where.class, "Where", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWhere_AccessPoint(), theTypesPackage.getString(), "accessPoint", null, 1, 1, Where.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(whyEClass, Why.class, "Why", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWhy_Purpose(), theTypesPackage.getString(), "purpose", null, 1, 1, Why.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(howEClass, How.class, "How", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHow_Device(), theTypesPackage.getString(), "device", null, 1, 1, How.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(whenEClass, When.class, "When", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWhen_Time(), theTypesPackage.getString(), "time", null, 1, 1, When.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(whatEClass, What.class, "What", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWhat_Resource(), this.getCloudResource(), null, "resource", null, 1, 1, What.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getWhat_ResourceDescription(), theTypesPackage.getString(), "resourceDescription", null, 1, 1, What.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(cloudResourceEClass, CloudResource.class, "CloudResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCloudResource_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, CloudResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCloudResource_ResourceId(), theTypesPackage.getString(), "resourceId", null, 1, 1, CloudResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(authorizationPolicyEClass, AuthorizationPolicy.class, "AuthorizationPolicy", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1155,9 +1229,6 @@ public class CerbacProfilePackageImpl extends EPackageImpl implements CerbacProf
 		initEClass(policyPackageEClass, PolicyPackage.class, "PolicyPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPolicyPackage_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, PolicyPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPolicyPackage_Base_Package(), theUMLPackage.getPackage(), null, "base_Package", null, 1, 1, PolicyPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(cloudResourceEClass, CloudResource.class, "CloudResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCloudResource_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, CloudResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cloudServiceEClass, CloudService.class, "CloudService", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

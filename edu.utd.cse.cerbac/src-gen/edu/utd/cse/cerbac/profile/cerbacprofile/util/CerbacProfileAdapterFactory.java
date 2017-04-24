@@ -76,10 +76,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 				return createCerbacPolicyAdapter();
 			}
 			@Override
-			public Adapter caseAction(Action object) {
-				return createActionAdapter();
-			}
-			@Override
 			public Adapter caseWho(Who object) {
 				return createWhoAdapter();
 			}
@@ -108,6 +104,10 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 				return createWhatAdapter();
 			}
 			@Override
+			public Adapter caseCloudResource(CloudResource object) {
+				return createCloudResourceAdapter();
+			}
+			@Override
 			public Adapter caseAuthorizationPolicy(AuthorizationPolicy object) {
 				return createAuthorizationPolicyAdapter();
 			}
@@ -134,10 +134,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePolicyPackage(PolicyPackage object) {
 				return createPolicyPackageAdapter();
-			}
-			@Override
-			public Adapter caseCloudResource(CloudResource object) {
-				return createCloudResourceAdapter();
 			}
 			@Override
 			public Adapter caseCloudService(CloudService object) {
@@ -260,20 +256,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Action <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.Action
-	 * @generated
-	 */
-	public Adapter createActionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Who <em>Who</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -372,6 +354,20 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
+	 * @generated
+	 */
+	public Adapter createCloudResourceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.AuthorizationPolicy <em>Authorization Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -466,20 +462,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPolicyPackageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
-	 * @generated
-	 */
-	public Adapter createCloudResourceAdapter() {
 		return null;
 	}
 

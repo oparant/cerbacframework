@@ -79,12 +79,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CerbacProfilePackage.ACTION: {
-				Action action = (Action)theEObject;
-				T result = caseAction(action);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CerbacProfilePackage.WHO: {
 				Who who = (Who)theEObject;
 				T result = caseWho(who);
@@ -130,6 +124,12 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 				What what = (What)theEObject;
 				T result = caseWhat(what);
 				if (result == null) result = casePolicyAttributes(what);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CerbacProfilePackage.CLOUD_RESOURCE: {
+				CloudResource cloudResource = (CloudResource)theEObject;
+				T result = caseCloudResource(cloudResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -188,12 +188,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 			case CerbacProfilePackage.POLICY_PACKAGE: {
 				PolicyPackage policyPackage = (PolicyPackage)theEObject;
 				T result = casePolicyPackage(policyPackage);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CerbacProfilePackage.CLOUD_RESOURCE: {
-				CloudResource cloudResource = (CloudResource)theEObject;
-				T result = caseCloudResource(cloudResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -350,21 +344,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAction(Action object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Who</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -470,6 +449,21 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCloudResource(CloudResource object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Authorization Policy</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -571,21 +565,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePolicyPackage(PolicyPackage object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCloudResource(CloudResource object) {
 		return null;
 	}
 

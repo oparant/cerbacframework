@@ -56,10 +56,7 @@
 	
 	<drawerConfigurations id="edu.utd.cse.cerbac.node.CerbacEdges" label="Cerbac Edges" description="Cerbac Edges">
 	
-		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.actionassociation" label="ActionLink" description="Create a Action Link" kind="ConnectionTool">
-			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
-			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.ActionLink_Association_Edge"/>	
-		</ownedConfigurations>
+		
 		
 		<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.policyattributeassociation" 	label="PolicyAttributeLink" description="Create a Policy Attribute Link" kind="ConnectionTool">
 			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/access.png"/>
@@ -79,10 +76,7 @@
 	</drawerConfigurations>
 	<drawerConfigurations id="edu.utd.cse.cerbac.node.CerbacOthers" label="Cerbac Common" description="Cerbac Common Nodes">
 	
-	 <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.action" label="Action" description="Create a Policy Action">
-			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/Action.png"/>
-			<elementDescriptors elementTypeId="edu.utd.cse.cerbac.profile.Action_Shape"/>
-	 </ownedConfigurations>
+
 	 
 	<ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="edu.utd.cse.cerbac.policycontainer" label="Policy Container" description="Create a  Policy Container">
 			<icon pluginID="edu.utd.cse.cerbac" iconPath="resources/icons/obj16/PolicyContainer.png"/>

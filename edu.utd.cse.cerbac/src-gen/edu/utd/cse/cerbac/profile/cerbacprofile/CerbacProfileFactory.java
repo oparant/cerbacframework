@@ -22,15 +22,6 @@ public interface CerbacProfileFactory extends EFactory {
 	CerbacProfileFactory eINSTANCE = edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfileFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Action</em>'.
-	 * @generated
-	 */
-	Action createAction();
-
-	/**
 	 * Returns a new object of class '<em>Who</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

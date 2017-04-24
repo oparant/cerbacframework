@@ -56,7 +56,6 @@ public class CerbacProfileFactoryImpl extends EFactoryImpl implements CerbacProf
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case CerbacProfilePackage.ACTION: return createAction();
 			case CerbacProfilePackage.WHO: return createWho();
 			case CerbacProfilePackage.WHERE: return createWhere();
 			case CerbacProfilePackage.WHY: return createWhy();
@@ -88,16 +87,6 @@ public class CerbacProfileFactoryImpl extends EFactoryImpl implements CerbacProf
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Action createAction() {
-		ActionImpl action = new ActionImpl();
-		return action;
 	}
 
 	/**

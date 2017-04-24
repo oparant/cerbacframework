@@ -2,7 +2,6 @@
  */
 package edu.utd.cse.cerbac.profile.cerbacprofile.impl;
 
-import edu.utd.cse.cerbac.profile.cerbacprofile.Action;
 import edu.utd.cse.cerbac.profile.cerbacprofile.CerbacPolicy;
 import edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage;
 import edu.utd.cse.cerbac.profile.cerbacprofile.How;
@@ -12,18 +11,12 @@ import edu.utd.cse.cerbac.profile.cerbacprofile.Where;
 import edu.utd.cse.cerbac.profile.cerbacprofile.Who;
 import edu.utd.cse.cerbac.profile.cerbacprofile.Why;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,28 +26,19 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getAction <em>Action</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getWho <em>Who</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getWhere <em>Where</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getWhy <em>Why</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getHow <em>How</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getWhen <em>When</em>}</li>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getWhat <em>What</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacPolicyImpl#getAction <em>Action</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl implements CerbacPolicy {
-	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Action> action;
-
 	/**
 	 * The cached value of the '{@link #getWho() <em>Who</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -116,6 +100,46 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	protected What what;
 
 	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String action = ACTION_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,18 +156,6 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	@Override
 	protected EClass eStaticClass() {
 		return CerbacProfilePackage.Literals.CERBAC_POLICY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Action> getAction() {
-		if (action == null) {
-			action = new EObjectResolvingEList<Action>(Action.class, this, CerbacProfilePackage.CERBAC_POLICY__ACTION);
-		}
-		return action;
 	}
 
 	/**
@@ -379,11 +391,51 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.CERBAC_POLICY__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAction() {
+		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAction(String newAction) {
+		String oldAction = action;
+		action = newAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.CERBAC_POLICY__ACTION, oldAction, action));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
-				return getAction();
 			case CerbacProfilePackage.CERBAC_POLICY__WHO:
 				if (resolve) return getWho();
 				return basicGetWho();
@@ -402,6 +454,10 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 			case CerbacProfilePackage.CERBAC_POLICY__WHAT:
 				if (resolve) return getWhat();
 				return basicGetWhat();
+			case CerbacProfilePackage.CERBAC_POLICY__ID:
+				return getId();
+			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
+				return getAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -411,14 +467,9 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
-				getAction().clear();
-				getAction().addAll((Collection<? extends Action>)newValue);
-				return;
 			case CerbacProfilePackage.CERBAC_POLICY__WHO:
 				setWho((Who)newValue);
 				return;
@@ -437,6 +488,12 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 			case CerbacProfilePackage.CERBAC_POLICY__WHAT:
 				setWhat((What)newValue);
 				return;
+			case CerbacProfilePackage.CERBAC_POLICY__ID:
+				setId((String)newValue);
+				return;
+			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
+				setAction((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -449,9 +506,6 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
-				getAction().clear();
-				return;
 			case CerbacProfilePackage.CERBAC_POLICY__WHO:
 				setWho((Who)null);
 				return;
@@ -470,6 +524,12 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 			case CerbacProfilePackage.CERBAC_POLICY__WHAT:
 				setWhat((What)null);
 				return;
+			case CerbacProfilePackage.CERBAC_POLICY__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
+				setAction(ACTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -482,8 +542,6 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
-				return action != null && !action.isEmpty();
 			case CerbacProfilePackage.CERBAC_POLICY__WHO:
 				return who != null;
 			case CerbacProfilePackage.CERBAC_POLICY__WHERE:
@@ -496,8 +554,30 @@ public abstract class CerbacPolicyImpl extends CloudSecurityAndPrivacyPolicyImpl
 				return when != null;
 			case CerbacProfilePackage.CERBAC_POLICY__WHAT:
 				return what != null;
+			case CerbacProfilePackage.CERBAC_POLICY__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CerbacProfilePackage.CERBAC_POLICY__ACTION:
+				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", action: ");
+		result.append(action);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CerbacPolicyImpl
