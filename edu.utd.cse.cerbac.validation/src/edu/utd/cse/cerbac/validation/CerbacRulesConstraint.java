@@ -260,6 +260,7 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 						builder.append("Conflict Between " + p.getId() + " and " + n.getId() + " | ");
 					
 					}
+					System.out.println(builder.toString());
 				
 				}
 				
@@ -277,6 +278,106 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		// TODO Auto-generated method stub
 		
 		positiveObligationCerbacList.stream().forEach(p ->{
+			String action = p.getAction();
+			String principal = p.getWho().getPrincipal();
+			String what = p.getWhat().getResourceDescription();
+			String pId  = p.getId().replaceAll("\r", "").replaceAll("\n", "");
+			
+			
+			negativeObligationCerbacList.stream().forEach(n->{
+				String action1 = n.getAction();
+				String principal1 = n.getWho().getPrincipal();
+				String what1 = n.getWhat().getResourceDescription();
+				
+				String when = null;
+				if(n.getWhen() != null){
+					 when = n.getWhen().getTime();
+				}
+				
+				String why = null;
+				if(n.getWhy() != null){
+					 why = n.getWhy().getPurpose();
+				}
+				
+				String how = null;
+				if(n.getHow() != null){
+					 how = n.getHow().getDevice();
+				}
+				
+
+				String where = null;
+				if(n.getWhere() != null){
+					 where = n.getWhere().getAccessPoint();
+				}
+				
+				//next
+				String where1 = null;
+				if(p.getWhere() != null){
+					 where1 = p.getWhere().getAccessPoint();
+				}
+				
+				
+				String when1 = null;
+				if(p.getWhen() != null){
+					 when1 = p.getWhen().getTime();
+				}
+				
+				String why1 = null;
+				if(p.getWhy() != null){
+					 why1 = p.getWhy().getPurpose();
+				}
+				
+				String how1 = null;
+				if(p.getHow() != null){
+					 how1 = p.getHow().getDevice();
+				}
+	     		if(principal.trim().equalsIgnoreCase(principal1.trim()) && action.trim().equalsIgnoreCase(action1.trim()) && what.trim().equalsIgnoreCase(what1.trim())){
+					System.out.println(pId + " conflicts check " + n.getId());
+					if((when == null && when1 != null) || (when1 == null && when == null)){
+						builder.append("Conflict Between " + pId + " and " + n.getId() + " | ");
+						
+						
+					}else if((where == null && where1 != null) || (where1 == null && where == null)){
+						builder.append("Conflict Between " + pId + " and " + n.getId() + " | ");
+				
+						
+					}else if((how == null && how1 != null) || (how1 == null && how == null)){
+						builder.append("Conflict Between " + pId + " and " + n.getId() + " | ");
+						
+						
+					}else if((why == null && why1 != null) || (why1 == null && why == null)){
+						builder.append("Conflict Between " + pId + " and " + n.getId() + " | ");
+					
+					}
+				
+				}
+				
+				
+			});
+			
+		});
+		
+		 
+		
+	}
+
+	
+	
+	/**
+	 * 
+	 * @param positiveAuthCerbacList
+	 * @param negativeAuthCerbacList
+	 * @param positiveObligationCerbacList
+	 * @param negativeObligationCerbacList
+	 * @param builder
+	 */
+	private void checkAuthorizationInconsistency(List<PositiveAuthorizationImpl> positiveAuthCerbacList,
+			List<NegativeAuthorizationImpl> negativeAuthCerbacList,
+			List<PositiveObligationImpl> positiveObligationCerbacList,
+			List<NegativeObligationImpl> negativeObligationCerbacList, StringBuilder builder) {
+		// TODO Auto-generated method stub
+		
+		positiveAuthCerbacList.stream().forEach(p ->{
 			String action = p.getAction();
 			String principal = p.getWho().getPrincipal();
 			String what = p.getWhat().getResourceDescription();
@@ -353,29 +454,99 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 			});
 			
 		});
-		
-		 
-		
+	
 	}
-
-	
-	
-	
-	private void checkAuthorizationInconsistency(List<PositiveAuthorizationImpl> positiveAuthCerbacList,
-			List<NegativeAuthorizationImpl> negativeAuthCerbacList,
-			List<PositiveObligationImpl> positiveObligationCerbacList,
-			List<NegativeObligationImpl> negativeObligationCerbacList, StringBuilder builder) {
-		// TODO Auto-generated method stub
-		
-		 
-		
-	}
-	
+	/**
+	 * 
+	 * @param positiveAuthCerbacList
+	 * @param negativeAuthCerbacList
+	 * @param positiveObligationCerbacList
+	 * @param negativeObligationCerbacList
+	 * @param builder
+	 */
 	private void checkObligationInconsistency(List<PositiveAuthorizationImpl> positiveAuthCerbacList,
 			List<NegativeAuthorizationImpl> negativeAuthCerbacList,
 			List<PositiveObligationImpl> positiveObligationCerbacList,
 			List<NegativeObligationImpl> negativeObligationCerbacList, StringBuilder builder) {
 		// TODO Auto-generated method stub
+		
+		negativeObligationCerbacList.stream().forEach(p ->{
+			String action = p.getAction();
+			String principal = p.getWho().getPrincipal();
+			String what = p.getWhat().getResourceDescription();
+			
+			positiveAuthCerbacList.stream().forEach(n->{
+				String action1 = n.getAction();
+				String principal1 = n.getWho().getPrincipal();
+				String what1 = n.getWhat().getResourceDescription();
+				
+				String when = null;
+				if(n.getWhen() != null){
+					 when = n.getWhen().getTime();
+				}
+				
+				String why = null;
+				if(n.getWhy() != null){
+					 why = n.getWhy().getPurpose();
+				}
+				
+				String how = null;
+				if(n.getHow() != null){
+					 how = n.getHow().getDevice();
+				}
+				
+
+				String where = null;
+				if(n.getWhere() != null){
+					 where = n.getWhere().getAccessPoint();
+				}
+				
+				//next
+				String where1 = null;
+				if(p.getWhere() != null){
+					 where1 = p.getWhere().getAccessPoint();
+				}
+				
+				
+				String when1 = null;
+				if(p.getWhen() != null){
+					 when1 = p.getWhen().getTime();
+				}
+				
+				String why1 = null;
+				if(p.getWhy() != null){
+					 why1 = p.getWhy().getPurpose();
+				}
+				
+				String how1 = null;
+				if(p.getHow() != null){
+					 how1 = p.getHow().getDevice();
+				}
+	     		if(principal.trim().equalsIgnoreCase(principal1.trim()) && action.trim().equalsIgnoreCase(action1.trim()) && what.trim().equalsIgnoreCase(what1.trim())){
+					System.out.println(p.getId() + " conflicts check " + n.getId());
+					if((when == null && when1 != null) || (when1 == null && when == null)){
+						builder.append("Conflict Between " + p.getId() + " and " + n.getId() + " | ");
+						
+						
+					}else if((where == null && where1 != null) || (where1 == null && where == null)){
+						builder.append("Conflict Between " + p.getId() + " and " + n.getId() + " | ");
+				
+						
+					}else if((how == null && how1 != null) || (how1 == null && how == null)){
+						builder.append("Conflict Between " + p.getId() + " and " + n.getId() + " | ");
+						
+						
+					}else if((why == null && why1 != null) || (why1 == null && why == null)){
+						builder.append("Conflict Between " + p.getId() + " and " + n.getId() + " | ");
+					
+					}
+				
+				}
+				
+				
+			});
+			
+		});
 		
 		 
 		
