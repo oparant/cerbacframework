@@ -12,7 +12,7 @@ package edu.utd.cse.cerbac.profile.cerbacprofile;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTime <em>Time</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTimeBetween <em>Time Between</em>}</li>
  * </ul>
  *
  * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhen()
@@ -21,29 +21,29 @@ package edu.utd.cse.cerbac.profile.cerbacprofile;
  */
 public interface When extends PolicyAttributes {
 	/**
-	 * Returns the value of the '<em><b>Time</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time Between</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Time</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Time Between</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time</em>' attribute.
-	 * @see #setTime(String)
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhen_Time()
+	 * @return the value of the '<em>Time Between</em>' attribute.
+	 * @see #setTimeBetween(String)
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhen_TimeBetween()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getTime();
+	String getTimeBetween();
 
 	/**
-	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTime <em>Time</em>}' attribute.
+	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTimeBetween <em>Time Between</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time</em>' attribute.
-	 * @see #getTime()
+	 * @param value the new value of the '<em>Time Between</em>' attribute.
+	 * @see #getTimeBetween()
 	 * @generated
 	 */
-	void setTime(String value);
+	void setTimeBetween(String value);
 
 } // When

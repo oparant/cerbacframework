@@ -127,12 +127,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CerbacProfilePackage.CLOUD_RESOURCE: {
-				CloudResource cloudResource = (CloudResource)theEObject;
-				T result = caseCloudResource(cloudResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CerbacProfilePackage.AUTHORIZATION_POLICY: {
 				AuthorizationPolicy authorizationPolicy = (AuthorizationPolicy)theEObject;
 				T result = caseAuthorizationPolicy(authorizationPolicy);
@@ -188,6 +182,12 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 			case CerbacProfilePackage.POLICY_PACKAGE: {
 				PolicyPackage policyPackage = (PolicyPackage)theEObject;
 				T result = casePolicyPackage(policyPackage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CerbacProfilePackage.CLOUD_RESOURCE: {
+				CloudResource cloudResource = (CloudResource)theEObject;
+				T result = caseCloudResource(cloudResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -306,6 +306,22 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 			case CerbacProfilePackage.POLICY_GROUP_LINK: {
 				PolicyGroupLink policyGroupLink = (PolicyGroupLink)theEObject;
 				T result = casePolicyGroupLink(policyGroupLink);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CerbacProfilePackage.EMAIL_SERVICE: {
+				EmailService emailService = (EmailService)theEObject;
+				T result = caseEmailService(emailService);
+				if (result == null) result = caseCloudService(emailService);
+				if (result == null) result = caseCloudResource(emailService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CerbacProfilePackage.AUDIT_SERVICE: {
+				AuditService auditService = (AuditService)theEObject;
+				T result = caseAuditService(auditService);
+				if (result == null) result = caseCloudService(auditService);
+				if (result == null) result = caseCloudResource(auditService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -449,21 +465,6 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCloudResource(CloudResource object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Authorization Policy</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -565,6 +566,21 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePolicyPackage(PolicyPackage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCloudResource(CloudResource object) {
 		return null;
 	}
 
@@ -835,6 +851,36 @@ public class CerbacProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePolicyGroupLink(PolicyGroupLink object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Email Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Email Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmailService(EmailService object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Audit Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Audit Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuditService(AuditService object) {
 		return null;
 	}
 

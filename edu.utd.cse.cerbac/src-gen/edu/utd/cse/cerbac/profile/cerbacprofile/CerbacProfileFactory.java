@@ -274,6 +274,24 @@ public interface CerbacProfileFactory extends EFactory {
 	PolicyGroupLink createPolicyGroupLink();
 
 	/**
+	 * Returns a new object of class '<em>Email Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Email Service</em>'.
+	 * @generated
+	 */
+	EmailService createEmailService();
+
+	/**
+	 * Returns a new object of class '<em>Audit Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Audit Service</em>'.
+	 * @generated
+	 */
+	AuditService createAuditService();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

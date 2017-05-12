@@ -104,10 +104,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 				return createWhatAdapter();
 			}
 			@Override
-			public Adapter caseCloudResource(CloudResource object) {
-				return createCloudResourceAdapter();
-			}
-			@Override
 			public Adapter caseAuthorizationPolicy(AuthorizationPolicy object) {
 				return createAuthorizationPolicyAdapter();
 			}
@@ -134,6 +130,10 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePolicyPackage(PolicyPackage object) {
 				return createPolicyPackageAdapter();
+			}
+			@Override
+			public Adapter caseCloudResource(CloudResource object) {
+				return createCloudResourceAdapter();
 			}
 			@Override
 			public Adapter caseCloudService(CloudService object) {
@@ -206,6 +206,14 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePolicyGroupLink(PolicyGroupLink object) {
 				return createPolicyGroupLinkAdapter();
+			}
+			@Override
+			public Adapter caseEmailService(EmailService object) {
+				return createEmailServiceAdapter();
+			}
+			@Override
+			public Adapter caseAuditService(AuditService object) {
+				return createAuditServiceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -354,20 +362,6 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
-	 * @generated
-	 */
-	public Adapter createCloudResourceAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.AuthorizationPolicy <em>Authorization Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -462,6 +456,20 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPolicyPackageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
+	 * @generated
+	 */
+	public Adapter createCloudResourceAdapter() {
 		return null;
 	}
 
@@ -714,6 +722,34 @@ public class CerbacProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPolicyGroupLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.EmailService <em>Email Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.EmailService
+	 * @generated
+	 */
+	public Adapter createEmailServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.AuditService <em>Audit Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.AuditService
+	 * @generated
+	 */
+	public Adapter createAuditServiceAdapter() {
 		return null;
 	}
 

@@ -32,7 +32,9 @@
         lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Where" eSuperTypes="#//PolicyAttributes">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessPoint" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="origin" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Why" eSuperTypes="#//PolicyAttributes">
@@ -44,19 +46,13 @@
         lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="When" eSuperTypes="#//PolicyAttributes">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="What" eSuperTypes="#//PolicyAttributes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" ordered="false"
-        lowerBound="1" eType="#//CloudResource"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceDescription" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeBetween" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CloudResource" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceId" ordered="false"
+  <eClassifiers xsi:type="ecore:EClass" name="What" eSuperTypes="#//PolicyAttributes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platform" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AuthorizationPolicy" abstract="true"
@@ -71,6 +67,12 @@
         lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudResource" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CloudService" abstract="true" eSuperTypes="#//CloudResource"/>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware" eSuperTypes="#//CloudResource"/>
@@ -127,4 +129,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Association" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmailService" eSuperTypes="#//CloudService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuditService" eSuperTypes="#//CloudService"/>
 </ecore:EPackage>

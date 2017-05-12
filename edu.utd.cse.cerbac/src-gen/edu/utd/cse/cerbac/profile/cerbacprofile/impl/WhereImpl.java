@@ -19,31 +19,52 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhereImpl#getAccessPoint <em>Access Point</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhereImpl#getOrigin <em>Origin</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhereImpl#getLocation <em>Location</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WhereImpl extends PolicyAttributesImpl implements Where {
 	/**
-	 * The default value of the '{@link #getAccessPoint() <em>Access Point</em>}' attribute.
+	 * The default value of the '{@link #getOrigin() <em>Origin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAccessPoint()
+	 * @see #getOrigin()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ACCESS_POINT_EDEFAULT = null;
+	protected static final String ORIGIN_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAccessPoint() <em>Access Point</em>}' attribute.
+	 * The cached value of the '{@link #getOrigin() <em>Origin</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAccessPoint()
+	 * @see #getOrigin()
 	 * @generated
 	 * @ordered
 	 */
-	protected String accessPoint = ACCESS_POINT_EDEFAULT;
+	protected String origin = ORIGIN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LOCATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLocation() <em>Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected String location = LOCATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +90,8 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAccessPoint() {
-		return accessPoint;
+	public String getOrigin() {
+		return origin;
 	}
 
 	/**
@@ -78,11 +99,32 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAccessPoint(String newAccessPoint) {
-		String oldAccessPoint = accessPoint;
-		accessPoint = newAccessPoint;
+	public void setOrigin(String newOrigin) {
+		String oldOrigin = origin;
+		origin = newOrigin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHERE__ACCESS_POINT, oldAccessPoint, accessPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHERE__ORIGIN, oldOrigin, origin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocation(String newLocation) {
+		String oldLocation = location;
+		location = newLocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHERE__LOCATION, oldLocation, location));
 	}
 
 	/**
@@ -93,8 +135,10 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHERE__ACCESS_POINT:
-				return getAccessPoint();
+			case CerbacProfilePackage.WHERE__ORIGIN:
+				return getOrigin();
+			case CerbacProfilePackage.WHERE__LOCATION:
+				return getLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +151,11 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHERE__ACCESS_POINT:
-				setAccessPoint((String)newValue);
+			case CerbacProfilePackage.WHERE__ORIGIN:
+				setOrigin((String)newValue);
+				return;
+			case CerbacProfilePackage.WHERE__LOCATION:
+				setLocation((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +169,11 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHERE__ACCESS_POINT:
-				setAccessPoint(ACCESS_POINT_EDEFAULT);
+			case CerbacProfilePackage.WHERE__ORIGIN:
+				setOrigin(ORIGIN_EDEFAULT);
+				return;
+			case CerbacProfilePackage.WHERE__LOCATION:
+				setLocation(LOCATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +187,10 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHERE__ACCESS_POINT:
-				return ACCESS_POINT_EDEFAULT == null ? accessPoint != null : !ACCESS_POINT_EDEFAULT.equals(accessPoint);
+			case CerbacProfilePackage.WHERE__ORIGIN:
+				return ORIGIN_EDEFAULT == null ? origin != null : !ORIGIN_EDEFAULT.equals(origin);
+			case CerbacProfilePackage.WHERE__LOCATION:
+				return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +205,10 @@ public class WhereImpl extends PolicyAttributesImpl implements Where {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (accessPoint: ");
-		result.append(accessPoint);
+		result.append(" (origin: ");
+		result.append(origin);
+		result.append(", location: ");
+		result.append(location);
 		result.append(')');
 		return result.toString();
 	}

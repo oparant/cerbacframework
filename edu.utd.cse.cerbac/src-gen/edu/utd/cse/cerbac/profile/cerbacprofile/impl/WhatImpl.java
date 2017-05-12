@@ -3,13 +3,11 @@
 package edu.utd.cse.cerbac.profile.cerbacprofile.impl;
 
 import edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage;
-import edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource;
 import edu.utd.cse.cerbac.profile.cerbacprofile.What;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -22,41 +20,51 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhatImpl#getResource <em>Resource</em>}</li>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhatImpl#getResourceDescription <em>Resource Description</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhatImpl#getPlatform <em>Platform</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WhatImpl extends PolicyAttributesImpl implements What {
 	/**
-	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+	 * The default value of the '{@link #getResource() <em>Resource</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getResource()
 	 * @generated
 	 * @ordered
 	 */
-	protected CloudResource resource;
+	protected static final String RESOURCE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getResourceDescription() <em>Resource Description</em>}' attribute.
+	 * The cached value of the '{@link #getResource() <em>Resource</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResourceDescription()
+	 * @see #getResource()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESOURCE_DESCRIPTION_EDEFAULT = null;
+	protected String resource = RESOURCE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getResourceDescription() <em>Resource Description</em>}' attribute.
+	 * The default value of the '{@link #getPlatform() <em>Platform</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResourceDescription()
+	 * @see #getPlatform()
 	 * @generated
 	 * @ordered
 	 */
-	protected String resourceDescription = RESOURCE_DESCRIPTION_EDEFAULT;
+	protected static final String PLATFORM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPlatform() <em>Platform</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlatform()
+	 * @generated
+	 * @ordered
+	 */
+	protected String platform = PLATFORM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,15 +90,7 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudResource getResource() {
-		if (resource != null && resource.eIsProxy()) {
-			InternalEObject oldResource = (InternalEObject)resource;
-			resource = (CloudResource)eResolveProxy(oldResource);
-			if (resource != oldResource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CerbacProfilePackage.WHAT__RESOURCE, oldResource, resource));
-			}
-		}
+	public String getResource() {
 		return resource;
 	}
 
@@ -99,17 +99,8 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudResource basicGetResource() {
-		return resource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResource(CloudResource newResource) {
-		CloudResource oldResource = resource;
+	public void setResource(String newResource) {
+		String oldResource = resource;
 		resource = newResource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHAT__RESOURCE, oldResource, resource));
@@ -120,8 +111,8 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getResourceDescription() {
-		return resourceDescription;
+	public String getPlatform() {
+		return platform;
 	}
 
 	/**
@@ -129,11 +120,11 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResourceDescription(String newResourceDescription) {
-		String oldResourceDescription = resourceDescription;
-		resourceDescription = newResourceDescription;
+	public void setPlatform(String newPlatform) {
+		String oldPlatform = platform;
+		platform = newPlatform;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHAT__RESOURCE_DESCRIPTION, oldResourceDescription, resourceDescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHAT__PLATFORM, oldPlatform, platform));
 	}
 
 	/**
@@ -145,10 +136,9 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CerbacProfilePackage.WHAT__RESOURCE:
-				if (resolve) return getResource();
-				return basicGetResource();
-			case CerbacProfilePackage.WHAT__RESOURCE_DESCRIPTION:
-				return getResourceDescription();
+				return getResource();
+			case CerbacProfilePackage.WHAT__PLATFORM:
+				return getPlatform();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,10 +152,10 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CerbacProfilePackage.WHAT__RESOURCE:
-				setResource((CloudResource)newValue);
+				setResource((String)newValue);
 				return;
-			case CerbacProfilePackage.WHAT__RESOURCE_DESCRIPTION:
-				setResourceDescription((String)newValue);
+			case CerbacProfilePackage.WHAT__PLATFORM:
+				setPlatform((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,10 +170,10 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CerbacProfilePackage.WHAT__RESOURCE:
-				setResource((CloudResource)null);
+				setResource(RESOURCE_EDEFAULT);
 				return;
-			case CerbacProfilePackage.WHAT__RESOURCE_DESCRIPTION:
-				setResourceDescription(RESOURCE_DESCRIPTION_EDEFAULT);
+			case CerbacProfilePackage.WHAT__PLATFORM:
+				setPlatform(PLATFORM_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -198,9 +188,9 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CerbacProfilePackage.WHAT__RESOURCE:
-				return resource != null;
-			case CerbacProfilePackage.WHAT__RESOURCE_DESCRIPTION:
-				return RESOURCE_DESCRIPTION_EDEFAULT == null ? resourceDescription != null : !RESOURCE_DESCRIPTION_EDEFAULT.equals(resourceDescription);
+				return RESOURCE_EDEFAULT == null ? resource != null : !RESOURCE_EDEFAULT.equals(resource);
+			case CerbacProfilePackage.WHAT__PLATFORM:
+				return PLATFORM_EDEFAULT == null ? platform != null : !PLATFORM_EDEFAULT.equals(platform);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,8 +205,10 @@ public class WhatImpl extends PolicyAttributesImpl implements What {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (resourceDescription: ");
-		result.append(resourceDescription);
+		result.append(" (resource: ");
+		result.append(resource);
+		result.append(", platform: ");
+		result.append(platform);
 		result.append(')');
 		return result.toString();
 	}

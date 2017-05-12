@@ -63,7 +63,8 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyAttributes/base_Class"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Where">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//Where/accessPoint"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//Where/origin"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//Where/location"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Why">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//Why/purpose"/>
@@ -72,17 +73,12 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//How/device"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//When">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//When/time"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//When/timeBetween"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//What">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//What/resource"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//What/resourceDescription"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudResource">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CloudResource/base_Class"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//CloudResource/resourceId"/>
+          propertySortChoices="true" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//What/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//What/platform"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//AuthorizationPolicy"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//ObligationPolicy"/>
@@ -95,6 +91,11 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyPackage/base_Class"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyPackage/base_Package"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudResource">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//CloudResource/base_Class"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute cerbacprofile.ecore#//CloudResource/resourceId"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="cerbacprofile.ecore#//CloudService"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//Hardware"/>
@@ -151,5 +152,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference cerbacprofile.ecore#//PolicyGroupLink/base_Association"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//EmailService"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="cerbacprofile.ecore#//AuditService"/>
   </genPackages>
 </genmodel:GenModel>

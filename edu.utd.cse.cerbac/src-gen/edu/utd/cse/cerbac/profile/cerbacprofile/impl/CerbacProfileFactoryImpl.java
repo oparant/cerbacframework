@@ -84,6 +84,8 @@ public class CerbacProfileFactoryImpl extends EFactoryImpl implements CerbacProf
 			case CerbacProfilePackage.POLICY_ATTRIBUTE_LINK: return createPolicyAttributeLink();
 			case CerbacProfilePackage.POLICY_GROUP: return createPolicyGroup();
 			case CerbacProfilePackage.POLICY_GROUP_LINK: return createPolicyGroupLink();
+			case CerbacProfilePackage.EMAIL_SERVICE: return createEmailService();
+			case CerbacProfilePackage.AUDIT_SERVICE: return createAuditService();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -367,6 +369,26 @@ public class CerbacProfileFactoryImpl extends EFactoryImpl implements CerbacProf
 	public PolicyGroupLink createPolicyGroupLink() {
 		PolicyGroupLinkImpl policyGroupLink = new PolicyGroupLinkImpl();
 		return policyGroupLink;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmailService createEmailService() {
+		EmailServiceImpl emailService = new EmailServiceImpl();
+		return emailService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AuditService createAuditService() {
+		AuditServiceImpl auditService = new AuditServiceImpl();
+		return auditService;
 	}
 
 	/**

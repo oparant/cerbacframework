@@ -13,7 +13,7 @@ package edu.utd.cse.cerbac.profile.cerbacprofile;
  * </p>
  * <ul>
  *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource <em>Resource</em>}</li>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResourceDescription <em>Resource Description</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getPlatform <em>Platform</em>}</li>
  * </ul>
  *
  * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhat()
@@ -22,55 +22,55 @@ package edu.utd.cse.cerbac.profile.cerbacprofile;
  */
 public interface What extends PolicyAttributes {
 	/**
-	 * Returns the value of the '<em><b>Resource</b></em>' reference.
+	 * Returns the value of the '<em><b>Resource</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Resource</em>' reference isn't clear,
+	 * If the meaning of the '<em>Resource</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource</em>' reference.
-	 * @see #setResource(CloudResource)
+	 * @return the value of the '<em>Resource</em>' attribute.
+	 * @see #setResource(String)
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhat_Resource()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	CloudResource getResource();
-
-	/**
-	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource</em>' reference.
-	 * @see #getResource()
-	 * @generated
-	 */
-	void setResource(CloudResource value);
-
-	/**
-	 * Returns the value of the '<em><b>Resource Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resource Description</em>' attribute.
-	 * @see #setResourceDescription(String)
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhat_ResourceDescription()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getResourceDescription();
+	String getResource();
 
 	/**
-	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResourceDescription <em>Resource Description</em>}' attribute.
+	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource <em>Resource</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resource Description</em>' attribute.
-	 * @see #getResourceDescription()
+	 * @param value the new value of the '<em>Resource</em>' attribute.
+	 * @see #getResource()
 	 * @generated
 	 */
-	void setResourceDescription(String value);
+	void setResource(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Platform</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Platform</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Platform</em>' attribute.
+	 * @see #setPlatform(String)
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CerbacProfilePackage#getWhat_Platform()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getPlatform();
+
+	/**
+	 * Sets the value of the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getPlatform <em>Platform</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Platform</em>' attribute.
+	 * @see #getPlatform()
+	 * @generated
+	 */
+	void setPlatform(String value);
 
 } // What

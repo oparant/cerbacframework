@@ -306,13 +306,22 @@ public interface CerbacProfilePackage extends EPackage {
 	int WHERE__BASE_CLASS = POLICY_ATTRIBUTES__BASE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Access Point</b></em>' attribute.
+	 * The feature id for the '<em><b>Origin</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WHERE__ACCESS_POINT = POLICY_ATTRIBUTES_FEATURE_COUNT + 0;
+	int WHERE__ORIGIN = POLICY_ATTRIBUTES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHERE__LOCATION = POLICY_ATTRIBUTES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Where</em>' class.
@@ -321,7 +330,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WHERE_FEATURE_COUNT = POLICY_ATTRIBUTES_FEATURE_COUNT + 1;
+	int WHERE_FEATURE_COUNT = POLICY_ATTRIBUTES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Where</em>' class.
@@ -444,13 +453,13 @@ public interface CerbacProfilePackage extends EPackage {
 	int WHEN__BASE_CLASS = POLICY_ATTRIBUTES__BASE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Time Between</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WHEN__TIME = POLICY_ATTRIBUTES_FEATURE_COUNT + 0;
+	int WHEN__TIME_BETWEEN = POLICY_ATTRIBUTES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>When</em>' class.
@@ -490,7 +499,7 @@ public interface CerbacProfilePackage extends EPackage {
 	int WHAT__BASE_CLASS = POLICY_ATTRIBUTES__BASE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' reference.
+	 * The feature id for the '<em><b>Resource</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -499,13 +508,13 @@ public interface CerbacProfilePackage extends EPackage {
 	int WHAT__RESOURCE = POLICY_ATTRIBUTES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Resource Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Platform</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WHAT__RESOURCE_DESCRIPTION = POLICY_ATTRIBUTES_FEATURE_COUNT + 1;
+	int WHAT__PLATFORM = POLICY_ATTRIBUTES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>What</em>' class.
@@ -526,52 +535,6 @@ public interface CerbacProfilePackage extends EPackage {
 	int WHAT_OPERATION_COUNT = POLICY_ATTRIBUTES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl <em>Cloud Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getCloudResource()
-	 * @generated
-	 */
-	int CLOUD_RESOURCE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Base Class</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLOUD_RESOURCE__BASE_CLASS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Resource Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLOUD_RESOURCE__RESOURCE_ID = 1;
-
-	/**
-	 * The number of structural features of the '<em>Cloud Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLOUD_RESOURCE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Cloud Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLOUD_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuthorizationPolicyImpl <em>Authorization Policy</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,7 +542,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getAuthorizationPolicy()
 	 * @generated
 	 */
-	int AUTHORIZATION_POLICY = 10;
+	int AUTHORIZATION_POLICY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -688,7 +651,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getObligationPolicy()
 	 * @generated
 	 */
-	int OBLIGATION_POLICY = 11;
+	int OBLIGATION_POLICY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -797,7 +760,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getPositiveAuthorization()
 	 * @generated
 	 */
-	int POSITIVE_AUTHORIZATION = 12;
+	int POSITIVE_AUTHORIZATION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -906,7 +869,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getNegativeAuthorization()
 	 * @generated
 	 */
-	int NEGATIVE_AUTHORIZATION = 13;
+	int NEGATIVE_AUTHORIZATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -1015,7 +978,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getPositiveObligation()
 	 * @generated
 	 */
-	int POSITIVE_OBLIGATION = 14;
+	int POSITIVE_OBLIGATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -1124,7 +1087,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getNegativeObligation()
 	 * @generated
 	 */
-	int NEGATIVE_OBLIGATION = 15;
+	int NEGATIVE_OBLIGATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -1233,7 +1196,7 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getPolicyPackage()
 	 * @generated
 	 */
-	int POLICY_PACKAGE = 16;
+	int POLICY_PACKAGE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -1270,6 +1233,52 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @ordered
 	 */
 	int POLICY_PACKAGE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl <em>Cloud Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getCloudResource()
+	 * @generated
+	 */
+	int CLOUD_RESOURCE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_RESOURCE__BASE_CLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_RESOURCE__RESOURCE_ID = 1;
+
+	/**
+	 * The number of structural features of the '<em>Cloud Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_RESOURCE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Cloud Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_RESOURCE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudServiceImpl <em>Cloud Service</em>}' class.
@@ -2018,6 +2027,98 @@ public interface CerbacProfilePackage extends EPackage {
 	 */
 	int POLICY_GROUP_LINK_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.EmailServiceImpl <em>Email Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.EmailServiceImpl
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getEmailService()
+	 * @generated
+	 */
+	int EMAIL_SERVICE = 35;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_SERVICE__BASE_CLASS = CLOUD_SERVICE__BASE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_SERVICE__RESOURCE_ID = CLOUD_SERVICE__RESOURCE_ID;
+
+	/**
+	 * The number of structural features of the '<em>Email Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_SERVICE_FEATURE_COUNT = CLOUD_SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Email Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_SERVICE_OPERATION_COUNT = CLOUD_SERVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuditServiceImpl <em>Audit Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuditServiceImpl
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getAuditService()
+	 * @generated
+	 */
+	int AUDIT_SERVICE = 36;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_SERVICE__BASE_CLASS = CLOUD_SERVICE__BASE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_SERVICE__RESOURCE_ID = CLOUD_SERVICE__RESOURCE_ID;
+
+	/**
+	 * The number of structural features of the '<em>Audit Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_SERVICE_FEATURE_COUNT = CLOUD_SERVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Audit Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_SERVICE_OPERATION_COUNT = CLOUD_SERVICE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudSecurityAndPrivacyPolicy <em>Cloud Security And Privacy Policy</em>}'.
@@ -2191,15 +2292,26 @@ public interface CerbacProfilePackage extends EPackage {
 	EClass getWhere();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Where#getAccessPoint <em>Access Point</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Where#getOrigin <em>Origin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Access Point</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.Where#getAccessPoint()
+	 * @return the meta object for the attribute '<em>Origin</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.Where#getOrigin()
 	 * @see #getWhere()
 	 * @generated
 	 */
-	EAttribute getWhere_AccessPoint();
+	EAttribute getWhere_Origin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Where#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.Where#getLocation()
+	 * @see #getWhere()
+	 * @generated
+	 */
+	EAttribute getWhere_Location();
 
 	/**
 	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.Why <em>Why</em>}'.
@@ -2254,15 +2366,15 @@ public interface CerbacProfilePackage extends EPackage {
 	EClass getWhen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTime <em>Time</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.When#getTimeBetween <em>Time Between</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Time</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.When#getTime()
+	 * @return the meta object for the attribute '<em>Time Between</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.When#getTimeBetween()
 	 * @see #getWhen()
 	 * @generated
 	 */
-	EAttribute getWhen_Time();
+	EAttribute getWhen_TimeBetween();
 
 	/**
 	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What <em>What</em>}'.
@@ -2275,58 +2387,26 @@ public interface CerbacProfilePackage extends EPackage {
 	EClass getWhat();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource <em>Resource</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @return the meta object for the attribute '<em>Resource</em>'.
 	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.What#getResource()
 	 * @see #getWhat()
 	 * @generated
 	 */
-	EReference getWhat_Resource();
+	EAttribute getWhat_Resource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getResourceDescription <em>Resource Description</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.What#getPlatform <em>Platform</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resource Description</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.What#getResourceDescription()
+	 * @return the meta object for the attribute '<em>Platform</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.What#getPlatform()
 	 * @see #getWhat()
 	 * @generated
 	 */
-	EAttribute getWhat_ResourceDescription();
-
-	/**
-	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cloud Resource</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
-	 * @generated
-	 */
-	EClass getCloudResource();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getBase_Class <em>Base Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Class</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getBase_Class()
-	 * @see #getCloudResource()
-	 * @generated
-	 */
-	EReference getCloudResource_Base_Class();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId <em>Resource Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resource Id</em>'.
-	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId()
-	 * @see #getCloudResource()
-	 * @generated
-	 */
-	EAttribute getCloudResource_ResourceId();
+	EAttribute getWhat_Platform();
 
 	/**
 	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.AuthorizationPolicy <em>Authorization Policy</em>}'.
@@ -2419,6 +2499,38 @@ public interface CerbacProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPolicyPackage_Base_Package();
+
+	/**
+	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource <em>Cloud Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cloud Resource</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource
+	 * @generated
+	 */
+	EClass getCloudResource();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getBase_Class <em>Base Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Class</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getBase_Class()
+	 * @see #getCloudResource()
+	 * @generated
+	 */
+	EReference getCloudResource_Base_Class();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId <em>Resource Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resource Id</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.CloudResource#getResourceId()
+	 * @see #getCloudResource()
+	 * @generated
+	 */
+	EAttribute getCloudResource_ResourceId();
 
 	/**
 	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.CloudService <em>Cloud Service</em>}'.
@@ -2744,6 +2856,26 @@ public interface CerbacProfilePackage extends EPackage {
 	EReference getPolicyGroupLink_Base_Association();
 
 	/**
+	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.EmailService <em>Email Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Email Service</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.EmailService
+	 * @generated
+	 */
+	EClass getEmailService();
+
+	/**
+	 * Returns the meta object for class '{@link edu.utd.cse.cerbac.profile.cerbacprofile.AuditService <em>Audit Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Audit Service</em>'.
+	 * @see edu.utd.cse.cerbac.profile.cerbacprofile.AuditService
+	 * @generated
+	 */
+	EClass getAuditService();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2905,12 +3037,20 @@ public interface CerbacProfilePackage extends EPackage {
 		EClass WHERE = eINSTANCE.getWhere();
 
 		/**
-		 * The meta object literal for the '<em><b>Access Point</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Origin</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WHERE__ACCESS_POINT = eINSTANCE.getWhere_AccessPoint();
+		EAttribute WHERE__ORIGIN = eINSTANCE.getWhere_Origin();
+
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WHERE__LOCATION = eINSTANCE.getWhere_Location();
 
 		/**
 		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhyImpl <em>Why</em>}' class.
@@ -2959,12 +3099,12 @@ public interface CerbacProfilePackage extends EPackage {
 		EClass WHEN = eINSTANCE.getWhen();
 
 		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Time Between</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WHEN__TIME = eINSTANCE.getWhen_Time();
+		EAttribute WHEN__TIME_BETWEEN = eINSTANCE.getWhen_TimeBetween();
 
 		/**
 		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhatImpl <em>What</em>}' class.
@@ -2977,46 +3117,20 @@ public interface CerbacProfilePackage extends EPackage {
 		EClass WHAT = eINSTANCE.getWhat();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Resource</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WHAT__RESOURCE = eINSTANCE.getWhat_Resource();
+		EAttribute WHAT__RESOURCE = eINSTANCE.getWhat_Resource();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Platform</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute WHAT__RESOURCE_DESCRIPTION = eINSTANCE.getWhat_ResourceDescription();
-
-		/**
-		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl <em>Cloud Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl
-		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getCloudResource()
-		 * @generated
-		 */
-		EClass CLOUD_RESOURCE = eINSTANCE.getCloudResource();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLOUD_RESOURCE__BASE_CLASS = eINSTANCE.getCloudResource_Base_Class();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLOUD_RESOURCE__RESOURCE_ID = eINSTANCE.getCloudResource_ResourceId();
+		EAttribute WHAT__PLATFORM = eINSTANCE.getWhat_Platform();
 
 		/**
 		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuthorizationPolicyImpl <em>Authorization Policy</em>}' class.
@@ -3103,6 +3217,32 @@ public interface CerbacProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference POLICY_PACKAGE__BASE_PACKAGE = eINSTANCE.getPolicyPackage_Base_Package();
+
+		/**
+		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl <em>Cloud Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudResourceImpl
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getCloudResource()
+		 * @generated
+		 */
+		EClass CLOUD_RESOURCE = eINSTANCE.getCloudResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD_RESOURCE__BASE_CLASS = eINSTANCE.getCloudResource_Base_Class();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD_RESOURCE__RESOURCE_ID = eINSTANCE.getCloudResource_ResourceId();
 
 		/**
 		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.CloudServiceImpl <em>Cloud Service</em>}' class.
@@ -3387,6 +3527,26 @@ public interface CerbacProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference POLICY_GROUP_LINK__BASE_ASSOCIATION = eINSTANCE.getPolicyGroupLink_Base_Association();
+
+		/**
+		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.EmailServiceImpl <em>Email Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.EmailServiceImpl
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getEmailService()
+		 * @generated
+		 */
+		EClass EMAIL_SERVICE = eINSTANCE.getEmailService();
+
+		/**
+		 * The meta object literal for the '{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuditServiceImpl <em>Audit Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.AuditServiceImpl
+		 * @see edu.utd.cse.cerbac.profile.cerbacprofile.impl.CerbacProfilePackageImpl#getAuditService()
+		 * @generated
+		 */
+		EClass AUDIT_SERVICE = eINSTANCE.getAuditService();
 
 	}
 

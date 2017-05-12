@@ -152,7 +152,7 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 			
 			}
 
-			System.out.println("<<Type of Target::" + container.getCerbacpolicy());
+			System.out.println("@@@ Policy Type::" + container.getCerbacpolicy()  + " @@@");
 		}
 		
 		positiveAuthList.stream().forEach(s -> System.out.println(s));
@@ -161,10 +161,10 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		negativeObligationList.stream().forEach(s -> System.out.println(s));
 		
 		//A+/A- Check Conflict
-		System.out.println("<<Positive Authorization Size::" + positiveAuthCerbacList.size());
-		System.out.println("<<Negative Authorization Size::" + negativeAuthCerbacList.size());
-		System.out.println("<<Positive Obligation Size::" + positiveObligationCerbacList.size());
-		System.out.println("<<Negative Obligation Size::" + negativeObligationCerbacList.size());
+		System.out.println("@@@ Positive Authorization Size:" + positiveAuthCerbacList.size() + " @@@");
+		System.out.println("@@@ Negative Authorization Size:" + negativeAuthCerbacList.size()+ " @@@");
+		System.out.println("@@@ Positive Obligation Size:" + positiveObligationCerbacList.size() + " @@@");
+		System.out.println("@@@ Negative Obligation Size:" + negativeObligationCerbacList.size() + " @@@");
 		
 		
 		//check inconsistencies
@@ -193,16 +193,16 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		positiveAuthCerbacList.stream().forEach(p ->{
 			String action = p.getAction();
 			String principal = p.getWho().getPrincipal();
-			String what = p.getWhat().getResourceDescription();
+			String what = p.getWhat().getResource();
 			
 			negativeAuthCerbacList.stream().forEach(n->{
 				String action1 = n.getAction();
 				String principal1 = n.getWho().getPrincipal();
-				String what1 = n.getWhat().getResourceDescription();
+				String what1 = n.getWhat().getResource();
 				
 				String when = null;
 				if(n.getWhen() != null){
-					 when = n.getWhen().getTime();
+					 when = n.getWhen().getTimeBetween();
 				}
 				
 				String why = null;
@@ -218,19 +218,19 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 
 				String where = null;
 				if(n.getWhere() != null){
-					 where = n.getWhere().getAccessPoint();
+					 where = n.getWhere().getOrigin();
 				}
 				
 				//next
 				String where1 = null;
 				if(p.getWhere() != null){
-					 where1 = p.getWhere().getAccessPoint();
+					 where1 = p.getWhere().getOrigin();
 				}
 				
 				
 				String when1 = null;
 				if(p.getWhen() != null){
-					 when1 = p.getWhen().getTime();
+					 when1 = p.getWhen().getTimeBetween();
 				}
 				
 				String why1 = null;
@@ -280,18 +280,18 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		positiveObligationCerbacList.stream().forEach(p ->{
 			String action = p.getAction();
 			String principal = p.getWho().getPrincipal();
-			String what = p.getWhat().getResourceDescription();
+			String what = p.getWhat().getResource();
 			String pId  = p.getId().replaceAll("\r", "").replaceAll("\n", "");
 			
 			
 			negativeObligationCerbacList.stream().forEach(n->{
 				String action1 = n.getAction();
 				String principal1 = n.getWho().getPrincipal();
-				String what1 = n.getWhat().getResourceDescription();
+				String what1 = n.getWhat().getResource();
 				
 				String when = null;
 				if(n.getWhen() != null){
-					 when = n.getWhen().getTime();
+					 when = n.getWhen().getTimeBetween();
 				}
 				
 				String why = null;
@@ -307,19 +307,19 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 
 				String where = null;
 				if(n.getWhere() != null){
-					 where = n.getWhere().getAccessPoint();
+					 where = n.getWhere().getOrigin();
 				}
 				
 				//next
 				String where1 = null;
 				if(p.getWhere() != null){
-					 where1 = p.getWhere().getAccessPoint();
+					 where1 = p.getWhere().getOrigin();
 				}
 				
 				
 				String when1 = null;
 				if(p.getWhen() != null){
-					 when1 = p.getWhen().getTime();
+					 when1 = p.getWhen().getTimeBetween();
 				}
 				
 				String why1 = null;
@@ -380,16 +380,16 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		positiveAuthCerbacList.stream().forEach(p ->{
 			String action = p.getAction();
 			String principal = p.getWho().getPrincipal();
-			String what = p.getWhat().getResourceDescription();
+			String what = p.getWhat().getResource();
 			
 			negativeObligationCerbacList.stream().forEach(n->{
 				String action1 = n.getAction();
 				String principal1 = n.getWho().getPrincipal();
-				String what1 = n.getWhat().getResourceDescription();
+				String what1 = n.getWhat().getResource();
 				
 				String when = null;
 				if(n.getWhen() != null){
-					 when = n.getWhen().getTime();
+					 when = n.getWhen().getTimeBetween();
 				}
 				
 				String why = null;
@@ -405,19 +405,19 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 
 				String where = null;
 				if(n.getWhere() != null){
-					 where = n.getWhere().getAccessPoint();
+					 where = n.getWhere().getOrigin();
 				}
 				
 				//next
 				String where1 = null;
 				if(p.getWhere() != null){
-					 where1 = p.getWhere().getAccessPoint();
+					 where1 = p.getWhere().getOrigin();
 				}
 				
 				
 				String when1 = null;
 				if(p.getWhen() != null){
-					 when1 = p.getWhen().getTime();
+					 when1 = p.getWhen().getTimeBetween();
 				}
 				
 				String why1 = null;
@@ -473,16 +473,16 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 		negativeObligationCerbacList.stream().forEach(p ->{
 			String action = p.getAction();
 			String principal = p.getWho().getPrincipal();
-			String what = p.getWhat().getResourceDescription();
+			String what = p.getWhat().getResource();
 			
 			positiveAuthCerbacList.stream().forEach(n->{
 				String action1 = n.getAction();
 				String principal1 = n.getWho().getPrincipal();
-				String what1 = n.getWhat().getResourceDescription();
+				String what1 = n.getWhat().getResource();
 				
 				String when = null;
 				if(n.getWhen() != null){
-					 when = n.getWhen().getTime();
+					 when = n.getWhen().getTimeBetween();
 				}
 				
 				String why = null;
@@ -498,19 +498,19 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 
 				String where = null;
 				if(n.getWhere() != null){
-					 where = n.getWhere().getAccessPoint();
+					 where = n.getWhere().getOrigin();
 				}
 				
 				//next
 				String where1 = null;
 				if(p.getWhere() != null){
-					 where1 = p.getWhere().getAccessPoint();
+					 where1 = p.getWhere().getOrigin();
 				}
 				
 				
 				String when1 = null;
 				if(p.getWhen() != null){
-					 when1 = p.getWhen().getTime();
+					 when1 = p.getWhen().getTimeBetween();
 				}
 				
 				String why1 = null;
@@ -547,8 +547,7 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 			});
 			
 		});
-		
-		 
+	
 		
 	}
 
@@ -559,60 +558,58 @@ public class CerbacRulesConstraint extends AbstractModelConstraint {
 			WhyImpl why, HowImpl how, WhenImpl when) {
 		
 		StringBuffer policyBuffer = new StringBuffer();
-		policyBuffer.append(id + ":" + policyType + " ");
+		policyBuffer.append("{Id:" + id + ",Type:" + policyType + " ");
 	
 		if(who != null){
 			//String name = who.basicGetBase_Class().getName();
 			
-			policyBuffer.append(who.getPrincipal() + ",");
+			policyBuffer.append("Who:" + who.getPrincipal() + ",");
 		}
 		
-		policyBuffer.append(" {");
+		policyBuffer.append(" Action:[");
 		
 		
 		//List<String> actionList = actionElist.stream().map(a -> a.getBase_Class().getName()).collect(Collectors.toList());
 	   // String actions = String.join(",", actionList);
-	    policyBuffer.append(actions + "}");
+	    policyBuffer.append(actions + "]");
 	
 		
 		if(what != null){
-			
-			CloudResource resource = what.getResource();
-			if(resource == null)
-				policyBuffer.append("," + what.getResourceDescription());
+		
+				policyBuffer.append(",What:" + what.getResource());
 		}
 		
 	
 		if(how != null){
 			//String name = how.basicGetBase_Class().getName();
-			policyBuffer.append(", How<" + how.getDevice() + ">");
+			policyBuffer.append(", How:" + how.getDevice());
 		}else{
-			policyBuffer.append(", How<*>");
+			policyBuffer.append(", How:*");
 		}
 		
 	
 		if(why != null){
 			//String name = why.basicGetBase_Class().getName();
-			policyBuffer.append(", Why<" + why.getPurpose() + ">");
+			policyBuffer.append(", Why:" + why.getPurpose());
 		}else{
-			policyBuffer.append(", Why<*>");
+			policyBuffer.append(", Why:*");
 		}
 	
 		if(when != null){
 			//String name = when.basicGetBase_Class().getName();
-			policyBuffer.append(", When<" + when.getTime() + ">");
+			policyBuffer.append(", When:" + when.getTimeBetween());
 		}else{
-			policyBuffer.append(", When<*>");
+			policyBuffer.append(", When:*");
 		}
 		
 		
 		if(where != null){
 			//String name = where.basicGetBase_Class().getName();
-			policyBuffer.append(", Where<" + where.getAccessPoint() + ">");
+			policyBuffer.append(", Where:{Resource:" + where.getOrigin() + "}");
 		}else{
-			policyBuffer.append(", Where<*>");
+			policyBuffer.append(", Where:{*}");
 		}
-		
+		policyBuffer.append(" }");
 		return policyBuffer.toString();
 	}
 

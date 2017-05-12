@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhenImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link edu.utd.cse.cerbac.profile.cerbacprofile.impl.WhenImpl#getTimeBetween <em>Time Between</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WhenImpl extends PolicyAttributesImpl implements When {
 	/**
-	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * The default value of the '{@link #getTimeBetween() <em>Time Between</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTime()
+	 * @see #getTimeBetween()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TIME_EDEFAULT = null;
+	protected static final String TIME_BETWEEN_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * The cached value of the '{@link #getTimeBetween() <em>Time Between</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTime()
+	 * @see #getTimeBetween()
 	 * @generated
 	 * @ordered
 	 */
-	protected String time = TIME_EDEFAULT;
+	protected String timeBetween = TIME_BETWEEN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTime() {
-		return time;
+	public String getTimeBetween() {
+		return timeBetween;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTime(String newTime) {
-		String oldTime = time;
-		time = newTime;
+	public void setTimeBetween(String newTimeBetween) {
+		String oldTimeBetween = timeBetween;
+		timeBetween = newTimeBetween;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHEN__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, CerbacProfilePackage.WHEN__TIME_BETWEEN, oldTimeBetween, timeBetween));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHEN__TIME:
-				return getTime();
+			case CerbacProfilePackage.WHEN__TIME_BETWEEN:
+				return getTimeBetween();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHEN__TIME:
-				setTime((String)newValue);
+			case CerbacProfilePackage.WHEN__TIME_BETWEEN:
+				setTimeBetween((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHEN__TIME:
-				setTime(TIME_EDEFAULT);
+			case CerbacProfilePackage.WHEN__TIME_BETWEEN:
+				setTimeBetween(TIME_BETWEEN_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CerbacProfilePackage.WHEN__TIME:
-				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case CerbacProfilePackage.WHEN__TIME_BETWEEN:
+				return TIME_BETWEEN_EDEFAULT == null ? timeBetween != null : !TIME_BETWEEN_EDEFAULT.equals(timeBetween);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class WhenImpl extends PolicyAttributesImpl implements When {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (time: ");
-		result.append(time);
+		result.append(" (timeBetween: ");
+		result.append(timeBetween);
 		result.append(')');
 		return result.toString();
 	}
